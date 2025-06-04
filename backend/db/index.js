@@ -45,7 +45,11 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User",userSchema)
 
-export default {
-    connectToDB,
-    User
-}
+export default connectToDB
+export {User}
+
+
+
+
+
+

@@ -1,8 +1,12 @@
 import app from "./app.js"
 import {config} from "dotenv"
 import connectToDB from "./db/index.js"
-config()
+import cors from "cors"
+import express from "express" 
 
+config()
+app.use(cors())
+app.use(express.json())
 
 
 try {
@@ -13,3 +17,5 @@ try {
 } catch (error) {
     console.log(error)
 }
+
+

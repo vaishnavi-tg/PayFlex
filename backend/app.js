@@ -1,11 +1,8 @@
 import express from "express"
+import userRouter from "./routes/userRoutes"
 
 const app = express()
 
-app.get("/", (req,res)=> {
-    res.json({
-        "msg": "Hello Guys"
-    })
-})
+app.use("/api/v1",userRouter)
 
 export default app
